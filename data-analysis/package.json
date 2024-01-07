@@ -1,0 +1,7 @@
+{
+  "name": "data-analysis",
+  "dependencies": {
+    "glob": "^10.3.10"
+  },
+  "type": "module"
+}

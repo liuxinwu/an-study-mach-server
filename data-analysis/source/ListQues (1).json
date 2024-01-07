@@ -1,0 +1,618 @@
+{
+    "Count": 1000,
+    "PageIndex": 1,
+    "PageSize": 10,
+    "Message": null,
+    "Data": [
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 0,
+            "ViewCount": 117,
+            "DownCount": 1,
+            "PaperCount": 133,
+            "RealCount": 3,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "78d9eee2-47fd-42c3-8e69-743f23d4799c",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•南通期末）",
+            "LabelReportID": "952aa7a3-7409-423d-919f-ff4f9d2f2ef6",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "星光小学参加“书香传递”图书捐赠活动，六年级（1）班捐了班级图书总数的<img align=\"absmiddle\" style=\"vertical-align:middle\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAjCAYAAABPTYA6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAAB5SURBVEhL1Y9bCsAgDARz/0tbAvmwm7E+sJUOBGHNGGNlgcOSmd1KSQk2SXZQIqYlnBwnQoLTlFqCgzdPgpNucQfJUKKqyc8O8KGkfx+qkKf4o6SLKynBJsn2SMS0hJPjTHgzCc7eSTXdnfDlVyTHm+pSUOqxIJVyAfgiZ+3zZd2AAAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\" />，六年级（2）班捐了班级图书总数的<img align=\"absmiddle\" style=\"vertical-align:middle\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAjCAYAAABPTYA6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAAB5SURBVEhL1Y+BCsAgCAX9/592CDqcvrIi1nbwkMSzIl7goEREMB4oVRyWfBDlTUjEqwJpkdYupQSfMyvBJVofyKAFgbsFL0r+/cNReYq/SvZpBOz6YSSmTmu7Z68k1RKBUhxMZ603cPN3JCENjUiCDFoiTanHgsR8ATM0XvbR1+TJAAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\" />，六年级（3）班捐了班级图书总数的<img align=\"absmiddle\" style=\"vertical-align:middle\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAjCAYAAABPTYA6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAAB1SURBVEhL1Y8LCgAhCES9/6XdDRRcnU2L2s+DIYh5ZsQTfEgiipWu1IT9kpbLki3uk3ypLN1FiWMctqyslexaGiV9CfGg5PcuReQh/ibBj5+xQCnjZckGkb6ERDzKEQbJ2SWV4DqjEhwi54VW1CDwbcKExHwAe8dV/2nBVSkAAAAASUVORK5CYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\" />。三个班捐的图书本数一样多。（　　）班的图书总数最多。",
+            "Options": [
+                "六年级（1）班",
+                "六年级（2）班",
+                "六年级（3）班",
+                "不能确定"
+            ],
+            "Points": [
+                {
+                    "Key": "1211224",
+                    "Value": "分数大小的比较"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "69",
+                    "Value": "应用意识"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "0"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.7,
+            "RC": 3,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 1,
+            "ViewCount": 7,
+            "DownCount": 0,
+            "PaperCount": 3,
+            "RealCount": 3,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "ca83cf79-da5c-498a-bb7f-4b4665299499",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•南通期末）",
+            "LabelReportID": "952aa7a3-7409-423d-919f-ff4f9d2f2ef6",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "小明攀登一座山，上山用了12分钟。原路下山时，速度加快了<img align=\"absmiddle\" style=\"vertical-align:middle\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAjCAYAAABPTYA6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAABqSURBVEhL7Y+NCsAgCAZ9/5d2Cwycu2XFfmEHH4F5WqITvEQS4WusluYa4rxNlV8yrpdKc4ynuemIG6X49q6YPMTXJPz4Gg9KGQ9LPkS6iUQeFdgNsrNJKuFzRiUcYueG0lhDcDVhQlJdANT+c+FzGmayAAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\" />，他下山用了（　　）分钟",
+            "Options": [
+                "9",
+                "9.6",
+                "10",
+                "14.4"
+            ],
+            "Points": [
+                {
+                    "Key": "12162e",
+                    "Value": "简单的行程问题"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "69",
+                    "Value": "应用意识"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.5,
+            "RC": 3,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 1,
+            "ViewCount": 25,
+            "DownCount": 0,
+            "PaperCount": 41,
+            "RealCount": 2,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "df7451b6-da5b-43bb-a9c1-dbf843a2d949",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•南通期末）",
+            "LabelReportID": "952aa7a3-7409-423d-919f-ff4f9d2f2ef6",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "商家把一个标价450元的空气炸锅打八折出售，仍可获利45元，这个空气炸锅的进价是（　　）元。",
+            "Options": [
+                "360",
+                "315",
+                "300",
+                "270"
+            ],
+            "Points": [
+                {
+                    "Key": "121628",
+                    "Value": "百分数的实际应用"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "66",
+                    "Value": "运算能力"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "1"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.9,
+            "RC": 2,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 8,
+            "ViewCount": 524,
+            "DownCount": 4,
+            "PaperCount": 529,
+            "RealCount": 2,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "13d10276-1a3c-48ad-83a8-b2ecb7448520",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•依安县期末）",
+            "LabelReportID": "64dc1413-99ff-426c-941e-05307a5a95bb",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "甲数和乙数的比是2：3，乙数和丙数的比是2：5，甲数和丙数的比是（　　）",
+            "Options": [
+                "2：5",
+                "3：5",
+                "4：15"
+            ],
+            "Points": [
+                {
+                    "Key": "121511",
+                    "Value": "比的意义"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "433",
+                    "Value": "比和比例"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.7,
+            "RC": 2,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 0,
+            "ViewCount": 18,
+            "DownCount": 0,
+            "PaperCount": 18,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "16858f32-e31d-4125-8ca1-53eab58f5231",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•依安县期末）",
+            "LabelReportID": "64dc1413-99ff-426c-941e-05307a5a95bb",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "一件衣服，先提价5%，再降价5%，则现价（　　）原价。",
+            "Options": [
+                "等于",
+                "小于",
+                "大于"
+            ],
+            "Points": [
+                {
+                    "Key": "121628",
+                    "Value": "百分数的实际应用"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "17",
+                    "Value": "综合填空题"
+                },
+                {
+                    "Key": "45a",
+                    "Value": "分数百分数应用题"
+                },
+                {
+                    "Key": "65",
+                    "Value": "数据分析观念"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "1"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.7,
+            "RC": 1,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 0,
+            "ViewCount": 31,
+            "DownCount": 0,
+            "PaperCount": 7,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "d0630cb8-4967-4d1f-8412-80af23fde2ad",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•依安县期末）",
+            "LabelReportID": "67c48181-117a-426d-9c6f-9c8d23a8b8cb",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "2500乘4的积的末尾有（　　）个0。",
+            "Options": [
+                "2",
+                "3",
+                "4"
+            ],
+            "Points": [
+                {
+                    "Key": "1212164",
+                    "Value": "一位数乘多位数"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "66",
+                    "Value": "运算能力"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.7,
+            "RC": 1,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 0,
+            "ViewCount": 25,
+            "DownCount": 0,
+            "PaperCount": 35,
+            "RealCount": 2,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "fde35bf1-0c19-4553-a4c9-c959811edd4b",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•南通期末）",
+            "LabelReportID": "952aa7a3-7409-423d-919f-ff4f9d2f2ef6",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "为了得到2÷<img align=\"absmiddle\" style=\"vertical-align:middle\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAjCAYAAABPTYA6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAAB5SURBVEhL1Y9bCsAgDARz/0tbAvmwm7E+sJUOBGHNGGNlgcOSmd1KSQk2SXZQIqYlnBwnQoLTlFqCgzdPgpNucQfJUKKqyc8O8KGkfx+qkKf4o6SLKynBJsn2SMS0hJPjTHgzCc7eSTXdnfDlVyTHm+pSUOqxIJVyAfgiZ+3zZd2AAAAAAElFTkSuQmCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\" />的结果，下面三位同学用不同的方法表达了自己的想法，合理的有（　　）<br /><img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202311/101/15dd6504.png\" style=\"vertical-align:middle\" />",
+            "Options": [
+                "小华、小晨和小娜",
+                "小华和小晨",
+                "小华和小娜",
+                "小晨和小娜"
+            ],
+            "Points": [
+                {
+                    "Key": "1212327",
+                    "Value": "分数除法"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "69",
+                    "Value": "应用意识"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.7,
+            "RC": 2,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 0,
+            "ViewCount": 74,
+            "DownCount": 1,
+            "PaperCount": 63,
+            "RealCount": 2,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "6f53f2f5-f3b2-4b7d-a7c7-c3e0a52ad229",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•南通期末）",
+            "LabelReportID": "952aa7a3-7409-423d-919f-ff4f9d2f2ef6",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "古时候人们常常以物换物。5只兔子可换半只羊，6只羊可换2头猪，4头猪可换1头牛，李爷爷家的1头牛能换（　　）只兔子。",
+            "Options": [
+                "60",
+                "80",
+                "100",
+                "120"
+            ],
+            "Points": [
+                {
+                    "Key": "12162o",
+                    "Value": "简单的等量代换问题"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "1",
+                    "Value": "常规题型"
+                },
+                {
+                    "Key": "6",
+                    "Value": "能力层次"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "3"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.6,
+            "RC": 2,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 1,
+            "ViewCount": 25,
+            "DownCount": 0,
+            "PaperCount": 15,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "9b94d990-abad-4641-9af9-8fd45dd9bada",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•南通期末）",
+            "LabelReportID": "952aa7a3-7409-423d-919f-ff4f9d2f2ef6",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "下图四个情景中的比，可以用2：3表示的是（　　）",
+            "Options": [
+                "白球与黑球的个数比<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202312/675/8bb434c2.png\" style=\"vertical-align:middle\" />",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202312/675/e3b9e20d.png\" style=\"vertical-align:middle\" />小正方形与大正方形的面积比",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202312/675/7cf4a14b.png\" style=\"vertical-align:middle\" />哥哥与妹妹的身高比",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202312/675/c1b89c5c.png\" style=\"vertical-align:middle\" />糖和水的质量比"
+            ],
+            "Points": [
+                {
+                    "Key": "121511",
+                    "Value": "比的意义"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "18",
+                    "Value": "综合判断题"
+                },
+                {
+                    "Key": "69",
+                    "Value": "应用意识"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "0"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.5,
+            "RC": 1,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 1,
+            "ViewCount": 14,
+            "DownCount": 0,
+            "PaperCount": 4,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "b6b186a0-72ef-422f-b7da-e0fea375d910",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•依安县期末）",
+            "LabelReportID": "64dc1413-99ff-426c-941e-05307a5a95bb",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "某县前年绿色蔬菜总产量420万千克，比去年少了<img align=\"absmiddle\" style=\"vertical-align:middle\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAjCAYAAABPTYA6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAABcSURBVEhL7Y8JCgAgCAT9/6ctwSBk7aKiqIElKCeVeIBDJCL8DG+lOAUxr1PiS8p6SYptcoqdPDZKdvamqNzFbRJcPCYHSpaqZIGf6OnSLSFBmCt5gvCUVGJAYg6YcIjM4No8EAAAAABJRU5ErkJgggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\" />。去年全县绿色蔬菜总产量是（　　）万千克。",
+            "Options": [
+                "60",
+                "480",
+                "490"
+            ],
+            "Points": [
+                {
+                    "Key": "121626",
+                    "Value": "分数除法应用题"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "12",
+                    "Value": "应用题"
+                },
+                {
+                    "Key": "69",
+                    "Value": "应用意识"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.5,
+            "RC": 1,
+            "Date": "2024-01-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        }
+    ],
+    "EXData": null,
+    "Keyword": null,
+    "Keys": [],
+    "TotalPage": 100
+}
