@@ -2,6 +2,7 @@ import { glob } from 'glob'
 import { readFile, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'url'
 import { resolve } from 'path'
+import axiox from 'axios'
 
 /**
  * 判断是否是自定义占位符
@@ -85,16 +86,16 @@ const extractImg = str => {
 
 /**
  * 生成题目
- * @param {string[]} conetent 
+ * @param {string[]} content 
  * return { type: number, content?: string }[]
  */
-const generateContent = conetent => {
-  return conetent.map(str => {
+const generateContent = content => {
+  return content.map(str => {
     if (str.startsWith('<!--IMG')) {
       const id = str.match(/id=(\d)/)[1] || null
       return {
         type: 3,
-        conetent: imgs[id] || Object.create(null)
+        content: imgs[id] || Object.create(null)
       }
     }
 
@@ -104,7 +105,7 @@ const generateContent = conetent => {
       case '<!--RADIO-->':
         return { type: 2 }
       default:
-        return { type: 0, conetent: str }
+        return { type: 0, content: str }
     }
   })
 }
@@ -116,14 +117,16 @@ const generateQuestions = source => {
       res.push(...extractImg(content))
       return res
     }, [])
-    let _options = options.reduce((res, content) => {
+    const _options = options.reduce((res, content) => {
       res.push(extractImg(content))
       return res
     }, []).map(_ => generateContent(_))
-
+    const _points = points.map(({Key: key, Value: value}) => ({
+      key, value
+    }))
 
     return {
-      question, questionName, content: generateContent(_content), label, points, options: _options
+      question, questionName, content: generateContent(_content), label, points: _points, options: _options
     }
   })
 }
@@ -144,4 +147,7 @@ const generateQuestions = source => {
   }
 
   writeFile('./dist/questions.json', JSON.stringify(allContent))
+
+  const res = await axiox.post('http://127.0.0.1:3000/question/add', allContent)
+  console.log(res.data)
 })()
