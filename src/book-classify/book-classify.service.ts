@@ -1,16 +1,24 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import { BookClassifyDocument } from './schema/book-classify.schema';
+import { Model, Types } from 'mongoose';
+import {
+  BookClassify,
+  BookClassifyDocument,
+} from './schema/book-classify.schema';
 
 @Injectable()
 export class BookClassifyService {
   constructor(
-    @InjectModel('BookClassify')
+    @InjectModel(BookClassify.name)
     private bookClassifyModel: Model<BookClassifyDocument>,
   ) {}
 
-  add(question: BookClassifyDocument[]) {
+  add(question: BookClassifyDocument[]): Promise<BookClassifyDocument[]> {
     return this.bookClassifyModel.insertMany(question);
+  }
+
+  find(_id: Types.ObjectId): Promise<BookClassifyDocument[]> {
+    if (!_id) return this.bookClassifyModel.find().populate('pId').exec();
+    return this.bookClassifyModel.find({ _id });
   }
 }
