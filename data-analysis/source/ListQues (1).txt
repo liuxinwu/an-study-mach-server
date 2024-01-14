@@ -1,0 +1,599 @@
+{
+    "Count": 43,
+    "PageIndex": 1,
+    "PageSize": 10,
+    "Message": null,
+    "Data": [
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 1,
+            "ViewCount": 26,
+            "DownCount": 0,
+            "PaperCount": 19,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "dddcc7e1-983f-488a-a298-b32315df1ff0",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•夏津县期中）",
+            "LabelReportID": "28bc460d-7dc2-4a17-aa99-fb9fca17031d",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "小兔跑在小牛的（　　）面。<br /><img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202310/521/a3c29a7a.png\" style=\"vertical-align:middle\" />",
+            "Options": [
+                "上",
+                "下",
+                "前",
+                "后"
+            ],
+            "Points": [
+                {
+                    "Key": "122411",
+                    "Value": "前后"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "63",
+                    "Value": "空间观念"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.5,
+            "RC": 1,
+            "Date": "2023-12-27 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 2,
+            "ViewCount": 48,
+            "DownCount": 0,
+            "PaperCount": 24,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "78a66858-0b05-4bfb-b692-4a4f55684a4e",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•沧州月考）",
+            "LabelReportID": "7c7bff22-4163-4027-8c34-128d14cea6da",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "小朋友排队洗手，东东的前面是（　　）<br /><img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202312/542/10edb0e5.png\" style=\"vertical-align:middle\" />​",
+            "Options": [
+                "美美",
+                "青青",
+                "安安"
+            ],
+            "Points": [
+                {
+                    "Key": "122411",
+                    "Value": "前后"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "63",
+                    "Value": "空间观念"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "0"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.5,
+            "RC": 1,
+            "Date": "2023-12-18 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 2,
+            "ViewCount": 36,
+            "DownCount": 0,
+            "PaperCount": 41,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "3b780def-0966-4def-a090-9df4924fc83c",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•博湖县期中）",
+            "LabelReportID": "29988f3e-af36-411c-a78d-595ae929e106",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "下面各组图形中，△在□下面的是（　　）",
+            "Options": [
+                "△□",
+                "□△",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202312/113/afa37f55.png\" style=\"vertical-align:middle\" />",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202312/113/7bc343b4.png\" style=\"vertical-align:middle\" />"
+            ],
+            "Points": [
+                {
+                    "Key": "122412",
+                    "Value": "上下"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "63",
+                    "Value": "空间观念"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "3"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.5,
+            "RC": 1,
+            "Date": "2023-12-09 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 3,
+            "ViewCount": 37,
+            "DownCount": 0,
+            "PaperCount": 47,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "697c41ef-b9e6-4de6-b0f8-3de576ffc6bf",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023秋•成武县期中）",
+            "LabelReportID": "5640419c-f700-4a30-892e-21d3d524e553",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "排队买票，<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202311/634/c381bb95.png\" style=\"vertical-align:middle\" />的前面有（　　）人。<br /><img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202311/634/5a8df1fb.png\" style=\"vertical-align:middle\" />",
+            "Options": [
+                "1",
+                "3",
+                "5"
+            ],
+            "Points": [
+                {
+                    "Key": "122411",
+                    "Value": "前后"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "67",
+                    "Value": "推理能力"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "0"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.5,
+            "RC": 1,
+            "Date": "2023-12-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 4,
+            "ViewCount": 267,
+            "DownCount": 2,
+            "PaperCount": 390,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "0ed91455-e492-4b32-986e-2845b0d737d9",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2022秋•漳平市期末）",
+            "LabelReportID": "26352fc4-90ea-4ef2-9fd4-5cb91ebc58e4",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "把<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202304/55/db951815.png\" style=\"vertical-align:middle\" />放在<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202304/55/7dda88d6.png\" style=\"vertical-align:middle\" />的上面，把<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202304/55/0197abb8.png\" style=\"vertical-align:middle\" />放在<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202304/55/11501ab1.png\" style=\"vertical-align:middle\" />下面，摆放正确的是图（　　）",
+            "Options": [
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202304/55/4f218c59.png\" style=\"vertical-align:middle\" />",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202304/55/583b877a.png\" style=\"vertical-align:middle\" />",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202304/55/57765ed0.png\" style=\"vertical-align:middle\" />",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202304/55/e969ab30.png\" style=\"vertical-align:middle\" />"
+            ],
+            "Points": [
+                {
+                    "Key": "122412",
+                    "Value": "上下"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "63",
+                    "Value": "空间观念"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.7,
+            "RC": 1,
+            "Date": "2023-07-13 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 5,
+            "ViewCount": 144,
+            "DownCount": 0,
+            "PaperCount": 249,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "9b42562d-49bf-43b1-aa41-19e55b490811",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023春•威县期中）",
+            "LabelReportID": "b5e9509d-1023-4cf7-bddb-bd878f91ed4b",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "云云家住在五楼，桐桐家住在七楼，那么桐桐家在云云家的（　　）面。",
+            "Options": [
+                "下",
+                "前",
+                "上"
+            ],
+            "Points": [
+                {
+                    "Key": "122412",
+                    "Value": "上下"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "65",
+                    "Value": "数据分析观念"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.6,
+            "RC": 1,
+            "Date": "2023-06-08 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 1,
+            "ViewCount": 204,
+            "DownCount": 1,
+            "PaperCount": 179,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "42915939-ab45-40f8-a484-b6338900eb8f",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023春•邢台月考）",
+            "LabelReportID": "4cf16a04-11cb-4924-b50b-d429839d76ba",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "△在▽的下面，则下列摆放正确的是（　　）",
+            "Options": [
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202306/169/a73daf82.png\" style=\"vertical-align:middle\" />",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202306/169/a2e97fe1.png\" style=\"vertical-align:middle\" />",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202306/169/4cb24bf1.png\" style=\"vertical-align:middle\" />​"
+            ],
+            "Points": [
+                {
+                    "Key": "122412",
+                    "Value": "上下"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "63",
+                    "Value": "空间观念"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "0"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.7,
+            "RC": 1,
+            "Date": "2023-04-22 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 2,
+            "ViewCount": 88,
+            "DownCount": 0,
+            "PaperCount": 174,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "25d99a9e-fdf5-429c-8031-58ad1bf84ef6",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2023春•邢台月考）",
+            "LabelReportID": "4cf16a04-11cb-4924-b50b-d429839d76ba",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "（　　）跑在小虎的前面，小刚的后面。<br /><img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/202303/500/65c1c2c3.png\" style=\"vertical-align:middle\" />​",
+            "Options": [
+                "小军",
+                "小刚",
+                "小强"
+            ],
+            "Points": [
+                {
+                    "Key": "122411",
+                    "Value": "前后"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "63",
+                    "Value": "空间观念"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.6,
+            "RC": 1,
+            "Date": "2023-04-22 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 1,
+            "ViewCount": 163,
+            "DownCount": 2,
+            "PaperCount": 205,
+            "RealCount": 1,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "0c6e4815-a37b-4ae3-ac6f-30782703cc99",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2022秋•阳原县期末）",
+            "LabelReportID": "706620e9-8b9b-4594-a7b0-1ecbc9f0f20b",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "如图，蝴蝶在花朵的（　　）面。<br /><img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/202210/318/0927b333.png\" style=\"vertical-align:middle\" />",
+            "Options": [
+                "上",
+                "下",
+                "左"
+            ],
+            "Points": [
+                {
+                    "Key": "122412",
+                    "Value": "上下"
+                },
+                {
+                    "Key": "122411",
+                    "Value": "前后"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "63",
+                    "Value": "空间观念"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "0"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.7,
+            "RC": 1,
+            "Date": "2023-04-03 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        },
+        {
+            "VIP": 0,
+            "Point": 0,
+            "FavCount": 0,
+            "ViewCount": 272,
+            "DownCount": 1,
+            "PaperCount": 358,
+            "RealCount": 2,
+            "Teacher": "",
+            "Price": 0,
+            "IsFree": false,
+            "VideoFiles": [],
+            "Star": 0,
+            "IsLayer": false,
+            "LayerType": null,
+            "SID": null,
+            "ID": "8b536bb0-3e31-48e4-8c0f-2a59decff80a",
+            "Subject": 10,
+            "Cate": 1,
+            "CateName": "选择题",
+            "Label": "（2022秋•石阡县期中）",
+            "LabelReportID": "43b4a0e8-c2f6-4387-aac4-6c523d466ec8",
+            "ParentID": "00000000-0000-0000-0000-000000000000",
+            "ParentSID": null,
+            "ParentContent": "",
+            "Content": "6写在上面，4写在下面的是（　　）",
+            "Options": [
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202311/185/77c74d57.png\" style=\"vertical-align:middle\" />",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202311/185/041313c3.png\" style=\"vertical-align:middle\" />",
+                "<img alt=\"菁优网\" src=\"http://img.jyeoo.net/quiz/images/svg/202311/185/752011ee.png\" style=\"vertical-align:middle\" />"
+            ],
+            "Points": [
+                {
+                    "Key": "122412",
+                    "Value": "上下"
+                }
+            ],
+            "Topics": [
+                {
+                    "Key": "6",
+                    "Value": "能力层次"
+                }
+            ],
+            "Analyse": "",
+            "Method": "",
+            "Discuss": "",
+            "Answers": [
+                "2"
+            ],
+            "DisplayAnswer": "",
+            "QuesFiles": [],
+            "QuesChilds": [],
+            "Degree": 0.9,
+            "RC": 2,
+            "Date": "2023-11-25 00:00:00.000",
+            "Seq": 0,
+            "Score": 0
+        }
+    ],
+    "EXData": null,
+    "Keyword": null,
+    "Keys": [],
+    "TotalPage": 5
+}

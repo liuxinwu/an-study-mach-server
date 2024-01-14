@@ -1,27 +1,78 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose, { Document } from 'mongoose';
+import mongoose, { Document, Types } from 'mongoose';
 
 export type QuestionDocument = Question & Document;
 
 @Schema({ strict: true })
 export class Question extends Document {
-  @Prop()
+  @Prop({ required: true, dess: '课本id' })
+  bookId: Types.ObjectId;
+
+  @Prop({ required: true, dess: '章节id' })
+  chapterId: Types.ObjectId;
+
+  @Prop({ reqired: true, desc: '数据来源的数据id 防重复' })
+  sourceId: string;
+
+  @Prop({ required: true, desc: '题目类型' })
   question: number;
 
-  @Prop()
+  @Prop({ required: true, desc: '题目名称' })
   questionName: string;
 
-  @Prop()
+  @Prop({ required: true, desc: '题目内容' })
   content: { type: number; content: mongoose.Schema.Types.Mixed }[];
 
-  @Prop()
+  @Prop({ default: '', desc: '题目标签' })
   label: string;
 
-  @Prop()
+  @Prop({ default: [], desc: '考点' })
   points: { key: string; value: string }[];
 
-  @Prop()
+  @Prop({ default: [], desc: '选项' })
   options: { type: number; content: string }[][];
+
+  @Prop({ default: false, desc: '是否vip题目' })
+  vip: boolean;
+
+  @Prop({ default: 0, desc: '价格' })
+  price: number;
+
+  @Prop({ default: 0, desc: '活动价格' })
+  activityPrice: number;
+
+  @Prop({ desc: '答案' })
+  answers: string[];
+
+  @Prop({ default: 0, desc: '收藏数' })
+  favCount: number;
+
+  @Prop({ default: 0, desc: '查看数' })
+  viewCount: number;
+
+  @Prop({ default: 0, desc: '下载数' })
+  downCount: number;
+
+  @Prop({
+    default: null,
+    desc: '难度系数 难度系数(系数值区间为0~1)”反映试题的难易程度。系数值越大，试题就越容易；系数值越小，试题难度越大',
+  })
+  degree: number;
+
+  @Prop({
+    default: 0,
+    desc: '真题次数”指试题在大型考试中出现的次数。次数越多，试题常考指数越高；次数越少，试题常考指数越低。',
+  })
+  realCount: number;
+
+  @Prop({
+    default: 0,
+    desc: '组卷次数”指试题在用户组卷过程中被使用的次数。次数越多，试题热度越高；次数越少，试题热度越低。',
+  })
+  paperCount: number;
+
+  @Prop({ desc: '更新时间' })
+  date: string;
 }
 
 export const QuestionSchema = SchemaFactory.createForClass(Question);

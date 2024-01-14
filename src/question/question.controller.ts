@@ -8,7 +8,6 @@ export class QuestionController {
 
   @Post('add')
   add(@Body() question: QuestionDocument[]): Promise<QuestionDocument[]> {
-    console.log(question, 'questions');
     return this.questionService.add(question);
   }
 }
