@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
 
 export type BookClassifyDocument = BookClassify & Document;
 
@@ -21,7 +21,7 @@ export class BookClassify {
   sourceId: string;
 
   @Prop({ ref: 'BookVersion', desc: '版本id 自定义 来自 book-version 表' })
-  pId: Types.ObjectId;
+  pId: mongoose.Schema.Types.ObjectId;
 }
 
 export const BookClassifySchema = SchemaFactory.createForClass(BookClassify);

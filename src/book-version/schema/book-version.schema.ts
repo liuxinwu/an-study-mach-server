@@ -13,9 +13,3 @@ export class BookVersion {
 }
 
 export const BookVersionSchema = SchemaFactory.createForClass(BookVersion);
-
-BookVersionSchema.virtual('bookClassify', {
-  ref: 'BookClassify',
-  localField: '_id',
-  foreignField: 'pId',
-});

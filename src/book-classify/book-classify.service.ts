@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model, Types } from 'mongoose';
+import { Model, Schema } from 'mongoose';
 import {
   BookClassify,
   BookClassifyDocument,
@@ -17,7 +17,7 @@ export class BookClassifyService {
     return this.bookClassifyModel.insertMany(question);
   }
 
-  find(_id: Types.ObjectId): Promise<BookClassifyDocument[]> {
+  find(_id: Schema.Types.ObjectId): Promise<BookClassifyDocument[]> {
     if (!_id) return this.bookClassifyModel.find().populate('pId').exec();
     return this.bookClassifyModel.find({ _id });
   }

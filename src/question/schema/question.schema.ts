@@ -1,15 +1,15 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose, { Document, Types } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
 
 export type QuestionDocument = Question & Document;
 
 @Schema({ strict: true })
 export class Question extends Document {
   @Prop({ required: true, dess: '课本id' })
-  bookId: Types.ObjectId;
+  bookId: mongoose.Schema.Types.ObjectId;
 
   @Prop({ required: true, dess: '章节id' })
-  chapterId: Types.ObjectId;
+  chapterId: mongoose.Schema.Types.ObjectId;
 
   @Prop({ reqired: true, desc: '数据来源的数据id 防重复' })
   sourceId: string;
