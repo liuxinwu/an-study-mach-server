@@ -31,7 +31,6 @@ export const climbData = (method, url, body) => {
       },
       ...body
     })
-    console.log(status, data)
     if (status !== 200) return Throw(Error(message))
     resovle(data)
   })
@@ -42,7 +41,6 @@ export const urlPre = 'http://127.0.0.1:3000/'
 export const saveDB = (url, body) => {
   return new Promise(async (resolve, reject) => {
     const { status, message = '接口异常', data } = await axiox.post(`${urlPre}${url}`, body)
-    console.log(status, message, data)
 
     if (status !== 201) return Throw(Error(message))
     resolve(data)
