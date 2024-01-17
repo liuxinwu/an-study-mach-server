@@ -8,7 +8,7 @@ export class BookVersion {
   @Prop({ desc: '名称 EName' })
   name: string;
 
-  @Prop({ desc: '名称 EID' })
+  @Prop({ unique: true, desc: '名称 EID' })
   type: number;
 }
 

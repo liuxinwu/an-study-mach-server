@@ -11,7 +11,7 @@ export class Chapter {
   @Prop({ ref: 'BookClassify', desc: '书id 来自 book-version 表' })
   bookId: mongoose.Schema.Types.ObjectId;
 
-  @Prop({ desc: '数据源数据id ID' })
+  @Prop({ unique: true, desc: '数据源数据id ID' })
   sourceId: string;
 }
 

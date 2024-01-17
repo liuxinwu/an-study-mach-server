@@ -14,7 +14,7 @@ export class SubChapter {
   @Prop({ ref: 'Chapter', desc: '章节id 来自 chapter 表' })
   chapterId: mongoose.Schema.Types.ObjectId;
 
-  @Prop({ desc: '数据源数据id ID' })
+  @Prop({ unique: true, desc: '数据源数据id ID' })
   sourceId: string;
 
   @Prop({ ref: 'Point', desc: '知识点 Points' })

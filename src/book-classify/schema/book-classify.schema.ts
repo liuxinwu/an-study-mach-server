@@ -8,7 +8,7 @@ export class BookClassify {
   @Prop({ desc: '年级名 GName' })
   gradeName: string;
 
-  @Prop({ desc: '年级名称枚举 GID' })
+  @Prop({ unique: true, desc: '年级名称枚举 GID' })
   gradeType: number;
 
   @Prop({ desc: '学期 TName' })

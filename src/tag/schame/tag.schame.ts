@@ -8,7 +8,7 @@ export class Tag {
   @Prop({ desc: '类型' })
   type: number;
 
-  @Prop({ desc: '枚举' })
+  @Prop({ unique: true, desc: '枚举' })
   tag: string;
 
   @Prop({ desc: '文本' })
