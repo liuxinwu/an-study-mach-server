@@ -7,6 +7,7 @@ import { BookClassifyModule } from './book-classify/book-classify.module';
 import { BookVersionModule } from './book-version/book-version.module';
 import { ChapterModule } from './chapter/chapter.module';
 import { SubChapterModule } from './sub-chapter/sub-chapter.module';
+import { TagModule } from './tag/tag.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { SubChapterModule } from './sub-chapter/sub-chapter.module';
     BookVersionModule,
     ChapterModule,
     SubChapterModule,
+    TagModule,
   ],
   controllers: [AppController],
   providers: [AppService],

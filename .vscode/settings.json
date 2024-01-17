@@ -1,5 +1,6 @@
 {
     "files.autoSave": "onWindowChange",
     "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "prettier.endOfLine":  "lf"   
 }

@@ -26,11 +26,14 @@ export class Question extends Document {
   @Prop({ default: '', desc: '题目标签' })
   label: string;
 
+  @Prop({ default: [], desc: '选项' })
+  options: { type: number; content: string }[][];
+
   @Prop({ default: [], desc: '考点' })
   points: { key: string; value: string }[];
 
-  @Prop({ default: [], desc: '选项' })
-  options: { type: number; content: string }[][];
+  @Prop({ defalt: [], desc: '解题模型/方法 Topics' })
+  topics: mongoose.Schema.Types.ObjectId[];
 
   @Prop({ default: false, desc: '是否vip题目' })
   vip: boolean;
