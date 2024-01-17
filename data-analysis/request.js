@@ -49,7 +49,6 @@ export const climbData = (method, url, body) => {
       },
       ...body
     })
-    console.log(status, message)
     if (status !== 200) return Throw(Error(message))
     resovle(data)
   })

@@ -4,14 +4,14 @@
 // 知识点 type 4 https://api.jyeoo.com//V1/math3/Point/Get?tp=0&nd=0&kw=   Points
 // 解题模型/方法 type 5 https://api.jyeoo.com//math3/apptag/GetSolutions   Topics solutionNo
 
-import { type } from "os"
 import { climbData, saveDB } from "./request.js"
 
 (async () => {
   const data = await Promise.all([
     climbData('get', 'https://api.jyeoo.com//math3/AppTag/GetCommons', { params: { tp: 1 } }),
     climbData('get', 'https://api.jyeoo.com//math3/AppTag/GetCommons', { params: { tp: 2 } }),
-    climbData('get', 'https://api.jyeoo.com//math3/AppTag/GetAbilities')])
+    climbData('get', 'https://api.jyeoo.com//math3/AppTag/GetAbilities')
+  ])
   
   const tags = []
   data.forEach((_, index) => {
