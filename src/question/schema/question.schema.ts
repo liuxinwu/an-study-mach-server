@@ -64,18 +64,18 @@ export class Question extends Document {
 
   @Prop({
     default: 0,
-    desc: '真题次数”指试题在大型考试中出现的次数。次数越多，试题常考指数越高；次数越少，试题常考指数越低。',
+    desc: '真题次数 指试题在大型考试中出现的次数。次数越多，试题常考指数越高；次数越少，试题常考指数越低。',
   })
   realCount: number;
 
   @Prop({
     default: 0,
-    desc: '组卷次数”指试题在用户组卷过程中被使用的次数。次数越多，试题热度越高；次数越少，试题热度越低。',
+    desc: '组卷次数 指试题在用户组卷过程中被使用的次数。次数越多，试题热度越高；次数越少，试题热度越低。',
   })
   paperCount: number;
 
   @Prop({ desc: '更新时间' })
-  date: string;
+  date: Date;
 }
 
 export const QuestionSchema = SchemaFactory.createForClass(Question);

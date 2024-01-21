@@ -1,8 +1,8 @@
 // 题型 type 1 https://api.jyeoo.com//math3/AppTag/GetCommons?tp=1&pd=&g=
 // 来源 type 2 https://api.jyeoo.com//math3/AppTag/GetCommons?tp=2&pd=&g=
-// 能力 type 3 https://api.jyeoo.com//math3/AppTag/GetAbilities
+// 能力 type 3 https://api.jyeoo.com//math3/AppTag/GetAbilities 在题目中 Topics
 // 知识点 type 4 https://api.jyeoo.com//V1/math3/Point/Get?tp=0&nd=0&kw=   Points
-// 解题模型/方法 type 5 https://api.jyeoo.com//math3/apptag/GetSolutions   Topics solutionNo
+// 解题模型/方法 type 5 https://api.jyeoo.com//math3/apptag/GetSolutions   在题目中 Topics 题目搜索 solutionNo
 
 import { climbData, saveDB } from "./request.js"
 

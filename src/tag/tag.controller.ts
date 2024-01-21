@@ -12,9 +12,10 @@ export class TagController {
   }
 
   @Get('find')
-  find(@Query() query: Record<string, any>): Promise<TagDocument[]> {
-    const { _id } = query;
-    if (!_id) return this.tagService.find();
-    this.tagService.find({ _id });
+  find(@Query() query?: Record<string, any>): Promise<TagDocument[]> {
+    // const { _id } = query;
+    // if (!_id) return this.tagService.find();
+    // this.tagService.find({ _id });
+    return this.tagService.find(query);
   }
 }
