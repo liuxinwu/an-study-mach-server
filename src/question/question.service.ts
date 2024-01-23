@@ -12,4 +12,8 @@ export class QuestionService {
   add(question: QuestionDocument[]) {
     return this.questionModel.insertMany(question);
   }
+
+  find(query: Record<string, any>): Promise<QuestionDocument[]> {
+    return this.questionModel.find(query);
+  }
 }

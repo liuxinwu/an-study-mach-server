@@ -11,7 +11,7 @@ export class Question extends Document {
   @Prop({ required: true, dess: '章节id' })
   chapterId: mongoose.Schema.Types.ObjectId;
 
-  @Prop({ unique: true, reqired: true, desc: '数据来源的数据id 防重复' })
+  @Prop({ reqired: true, desc: '数据来源的数据id 防重复' })
   sourceId: string;
 
   @Prop({ required: true, desc: '题目类型' })
