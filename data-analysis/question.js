@@ -6,6 +6,13 @@ import axiox from 'axios';
 import { climbData, getData, saveDB } from './request.js';
 
 (async () => {
+  const sleep = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(true)
+      }, Math.random() * 1000 * 5 + 1000)
+    })
+  }
   const pointsMap = (await getData('tag/find', { params: { type: 4 } })).reduce(
     (_, { tag, _id }) => {
       _[tag] = _id;
@@ -36,10 +43,10 @@ import { climbData, getData, saveDB } from './request.js';
    * @param {string} str 
    */
   const extractTable = str => {
-    const reg = /<table>.*?<\/table>/g
+    const reg = /<table[.\r\n\s\S]*?<\/table>/g
     const arr = str.split(reg);
     const extractTd = str => {
-      const contents = str.match(/[\d\+-×÷=]{4}/g)
+      const contents = str.match(/[\d-\+×÷=]{4}/g) || []
       return contents.reduce((_, content) => {
         _.push(content, '<!--PLACEHOLDER-->')
         return _
@@ -49,9 +56,18 @@ import { climbData, getData, saveDB } from './request.js';
       return extractTd(str)
     })
     const res = []
-    
+
+    if (arr.length === 1) {
+      res.push(arr[0]);
+      return res;
+    }
+
     arr.forEach((_, index) => {
-      res.push(_, tdContent[index])
+      const tag = tdContent[index]
+      if (_ === '' && index !== arr.length - 1) return res.push(...tag);
+      if (_ === '' && index === arr.length - 1) return;
+      if (_ !== '' && index === arr.length - 1) return res.push(_);
+      res.push(_, ...tag)
     });
 
     console.log('提取占位符 table')
@@ -185,7 +201,7 @@ import { climbData, getData, saveDB } from './request.js';
       }
     });
   };
-  
+
   const QuestionsMap = {}
   const generateQuestions = (source, questionType) => {
     return source.filter(({ Content }) => {
@@ -193,6 +209,8 @@ import { climbData, getData, saveDB } from './request.js';
       // 过滤表格换行的
       // 过滤填空题、判断题没有填写区域的
       if ([2, 4].includes(questionType) && Content.includes('<\!--BA-->') && !Content.includes('<table')) return true
+
+      if (questionType === 1) return true
     }).map(
       ({
         ID: sourceId,
@@ -237,8 +255,8 @@ import { climbData, getData, saveDB } from './request.js';
           .map((_) => generateContent(_));
         QuestionsMap[sourceId] = (QuestionsMap[sourceId] || 0) + 1
         return {
-          bookId: '65a635856bdd0ab8fe826d1e',
-          chapterId: '65a635856bdd0ab8fe826df6',
+          bookId: '65b1d1264b32df6bd31f39a1',
+          chapterId: '65b1d1274b32df6bd31f3b90',
           sourceId,
           question,
           questionName,
@@ -257,13 +275,13 @@ import { climbData, getData, saveDB } from './request.js';
           degree,
           realCount,
           paperCount,
-          date,
+          date: new Date(date),
         };
       },
     );
   };
 
-  const nextPage = async (url, params = {}, pi = 1, ps = 1) => {
+  const nextPage = async (url, params = {}, pi = 1, ps = 10) => {
     const questions = [];
     const { TotalPage, Data } = await climbData('get', url, {
       params: {
@@ -290,33 +308,29 @@ import { climbData, getData, saveDB } from './request.js';
       },
     });
     console.log(`成功爬取${(pi - 1) * 10}-${pi * 10}条数据！`)
+    writeFile('./question.json', JSON.stringify(Data))
     questions.push(...generateQuestions(Data, params.ct));
     await saveDB('question/add', questions);
     console.log(`成功存储${(pi - 1) * 10}-${pi * 10}条数据！`)
 
     if (pi < TotalPage) {
+      await sleep()
       await nextPage(url, params, pi + 1, ps)
       console.log(TotalPage, 'TotalPage')
     }
   };
 
-  // nextPage('https://api.jyeoo.com//math3/AppTag/ListQues', {
-  //   ct: 1,
-  //   p1: 'afd13af0-1958-4812-8441-139d2934b40a', // bookId
-  //   p2: '7a7cfb0d-c485-4ec5-8e9b-f860c0e1e071', // 章节id
-  // });
   console.log('成功获取所有的选择题！')
 
   await nextPage('https://api.jyeoo.com//math3/AppTag/ListQues', {
-    ct: 5,
+    ct: 1,
     p1: 'afd13af0-1958-4812-8441-139d2934b40a', // bookId
-    p2: 'e8c05cea-677e-4822-a1f8-cb2dfed0049b', // 章节id
+    p2: 'b812b8ad-0457-4362-a477-2d67edf937c2', // 章节id
   });
   console.log('成功获取所有的填空题！')
   console.log(QuestionsMap)
 
   // 获取答案
-  // const res = await axiox.post('http://127.0.0.1:3000/question/add', allContent)
   // const analyse = await axios.get('https://api.jyeoo.com//math3/AppTag/GetQues?id=dddcc7e1-983f-488a-a298-b32315df1ff0&s=0', {
   //   headers: {
   //     "Host": "api.jyeoo.com",

@@ -3,7 +3,7 @@ import mongoose, { Document } from 'mongoose';
 
 export type QuestionDocument = Question & Document;
 
-@Schema({ strict: true })
+@Schema({ strict: true, timestamps: true })
 export class Question extends Document {
   @Prop({ required: true, dess: '课本id' })
   bookId: mongoose.Schema.Types.ObjectId;
