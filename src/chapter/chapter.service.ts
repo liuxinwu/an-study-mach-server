@@ -14,10 +14,10 @@ export class ChapterService {
     return this.chapterModel.insertMany(query);
   }
 
-  async find(_id?: Schema.Types.ObjectId): Promise<ChapterDocument[]> {
+  async find(query?: Record<string, any>): Promise<ChapterDocument[]> {
     // 排除不显示字段 0 不显示  1 显示
     const exculdField = { __v: 0 };
-    if (!_id)
+    if (!Object.keys(query).length) {
       return this.chapterModel.aggregate([
         {
           $project: exculdField,
@@ -38,6 +38,7 @@ export class ChapterService {
           },
         },
       ]); // 聚合查询中进行数据关联
-    return this.chapterModel.find({ _id }, exculdField);
+    }
+    return this.chapterModel.find(query, exculdField);
   }
 }

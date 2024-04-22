@@ -13,8 +13,6 @@ export class SubChapterController {
 
   @Get('find')
   find(@Query() query: Record<string, any>): Promise<SubChapterDocument[]> {
-    const { _id } = query;
-    if (!_id) return this.subChapterService.find();
-    return this.subChapterService.find({ _id });
+    return this.subChapterService.find(query);
   }
 }

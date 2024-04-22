@@ -1,18 +1,17 @@
-import { glob } from 'glob';
-import { readFile, writeFile } from 'node:fs/promises';
-import { fileURLToPath } from 'url';
-import { resolve } from 'path';
-import axiox from 'axios';
+import { writeFile } from 'node:fs/promises';
 import { climbData, getData, saveDB } from './request.js';
 
 (async () => {
   const sleep = () => {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(true)
-      }, Math.random() * 1000 * 5 + 1000)
-    })
-  }
+      setTimeout(
+        () => {
+          resolve(true);
+        },
+        Math.random() * 1000 * 5 + 1000,
+      );
+    });
+  };
   const pointsMap = (await getData('tag/find', { params: { type: 4 } })).reduce(
     (_, { tag, _id }) => {
       _[tag] = _id;
@@ -20,14 +19,14 @@ import { climbData, getData, saveDB } from './request.js';
     },
     Object.create(null),
   );
-  console.log('成功获取知识点数据！')
+  console.log('成功获取知识点数据！');
   const topicsMap = (
     await getData('tag/find', { params: { type: { $in: [3, 5] } } })
   ).reduce((_, { tag, _id }) => {
     _[tag] = _id;
     return _;
   }, Object.create(null));
-  console.log('成功获取能力、解题模型/方法数据！')
+  console.log('成功获取能力、解题模型/方法数据！');
 
   /**
    * 判断是否是自定义占位符
@@ -40,22 +39,22 @@ import { climbData, getData, saveDB } from './request.js';
 
   /**
    * 提取 table 里面的内容转换成填空
-   * @param {string} str 
+   * @param {string} str
    */
-  const extractTable = str => {
-    const reg = /<table[.\r\n\s\S]*?<\/table>/g
+  const extractTable = (str) => {
+    const reg = /<table[.\r\n\s\S]*?<\/table>/g;
     const arr = str.split(reg);
-    const extractTd = str => {
-      const contents = str.match(/[\d-\+×÷=]{4}/g) || []
+    const extractTd = (str) => {
+      const contents = str.match(/[\d-\+×÷=]{4}/g) || [];
       return contents.reduce((_, content) => {
-        _.push(content, '<!--PLACEHOLDER-->')
-        return _
-      }, [])
-    }
-    const tdContent = (str.match(reg) || []).map(str => {
-      return extractTd(str)
-    })
-    const res = []
+        _.push(content, '<!--PLACEHOLDER-->');
+        return _;
+      }, []);
+    };
+    const tdContent = (str.match(reg) || []).map((str) => {
+      return extractTd(str);
+    });
+    const res = [];
 
     if (arr.length === 1) {
       res.push(arr[0]);
@@ -63,16 +62,16 @@ import { climbData, getData, saveDB } from './request.js';
     }
 
     arr.forEach((_, index) => {
-      const tag = tdContent[index]
+      const tag = tdContent[index];
       if (_ === '' && index !== arr.length - 1) return res.push(...tag);
       if (_ === '' && index === arr.length - 1) return;
       if (_ !== '' && index === arr.length - 1) return res.push(_);
-      res.push(_, ...tag)
+      res.push(_, ...tag);
     });
 
-    console.log('提取占位符 table')
+    console.log('提取占位符 table');
     return res;
-  }
+  };
 
   /**
    * 提取占位符
@@ -96,7 +95,7 @@ import { climbData, getData, saveDB } from './request.js';
       res.push(_, tag);
     });
 
-    console.log('提取占位符 <!--BA--><!--EA-->')
+    console.log('提取占位符 <!--BA--><!--EA-->');
     return res;
   };
 
@@ -128,7 +127,7 @@ import { climbData, getData, saveDB } from './request.js';
       res.push(_, tag);
     });
 
-    console.log('提取占位符 （　　）')
+    console.log('提取占位符 （　　）');
     return res;
   };
 
@@ -172,7 +171,7 @@ import { climbData, getData, saveDB } from './request.js';
       res.push(_, tag);
     });
 
-    console.log('提取占位符 图片')
+    console.log('提取占位符 图片');
     return res;
   };
 
@@ -202,83 +201,90 @@ import { climbData, getData, saveDB } from './request.js';
     });
   };
 
-  const QuestionsMap = {}
+  const QuestionsMap = {};
   const generateQuestions = (source, questionType) => {
-    return source.filter(({ Content }) => {
-      if (5 === questionType && Content.includes('<table')) return true
-      // 过滤表格换行的
-      // 过滤填空题、判断题没有填写区域的
-      if ([2, 4].includes(questionType) && Content.includes('<\!--BA-->') && !Content.includes('<table')) return true
+    return source
+      .filter(({ Content }) => {
+        if (5 === questionType && Content.includes('<table')) return true;
+        // 过滤表格换行的
+        // 过滤填空题、判断题没有填写区域的
+        if (
+          [2, 4].includes(questionType) &&
+          Content.includes('<!--BA-->') &&
+          !Content.includes('<table')
+        )
+          return true;
 
-      if (questionType === 1) return true
-    }).map(
-      ({
-        ID: sourceId,
-        Cate: question,
-        CateName: questionName,
-        Content: content,
-        Label: label,
-        Points,
-        Topics,
-        Options: options,
-        VIP: vip,
-        Price: price,
-        Answers: answers,
-        FavCounte: favCount,
-        ViewCount: viewCount,
-        DownCount: downCount,
-        Degree: degree,
-        RealCount: realCount,
-        PaperCount: paperCount,
-        Date: date,
-      }) => {
-        let _content = []
-        if (questionType === 5) {
-          _content = extractTable(content);
-        } else {
-          _content = extractRadio(content);
-          _content = [..._content].reduce((res, content) => {
-            res.push(...extractImg(content));
-            return res;
-          }, []);
-          _content = [..._content].reduce((res, content) => {
-            res.push(...extractPlaceholder(content));
-            return res;
-          }, []);
-        }
+        if (questionType === 1) return true;
+      })
+      .map(
+        ({
+          ID: sourceId,
+          Cate: question,
+          CateName: questionName,
+          Content: content,
+          Label: label,
+          Points,
+          Topics,
+          Options: options,
+          VIP: vip,
+          Price: price,
+          Answers: answers,
+          FavCounte: favCount,
+          ViewCount: viewCount,
+          DownCount: downCount,
+          Degree: degree,
+          RealCount: realCount,
+          PaperCount: paperCount,
+          Date: date,
+        }) => {
+          let _content = [];
+          if (questionType === 5) {
+            _content = extractTable(content);
+          } else {
+            _content = extractRadio(content);
+            _content = [..._content].reduce((res, content) => {
+              res.push(...extractImg(content));
+              return res;
+            }, []);
+            _content = [..._content].reduce((res, content) => {
+              res.push(...extractPlaceholder(content));
+              return res;
+            }, []);
+          }
 
-        const _options = options
-          .reduce((res, content) => {
-            res.push(extractImg(content));
-            return res;
-          }, [])
-          .map((_) => generateContent(_));
-        QuestionsMap[sourceId] = (QuestionsMap[sourceId] || 0) + 1
-        return {
-          bookId: '65b1d1264b32df6bd31f39a1',
-          chapterId: '65b1d1274b32df6bd31f3b90',
-          sourceId,
-          question,
-          questionName,
-          content: generateContent(_content),
-          label,
-          options: _options,
-          points: Points.map(({ Key }) => pointsMap[Key]),
-          topics: Topics.map(({ Key }) => topicsMap[Key]),
-          vip,
-          price,
-          activityPrice: 0,
-          answers,
-          favCount,
-          viewCount,
-          downCount,
-          degree,
-          realCount,
-          paperCount,
-          date: new Date(date),
-        };
-      },
-    );
+          const _options = options
+            .reduce((res, content) => {
+              res.push(extractImg(content));
+              return res;
+            }, [])
+            .map((_) => generateContent(_));
+          QuestionsMap[sourceId] = (QuestionsMap[sourceId] || 0) + 1;
+          return {
+            bookId: '65a635856bdd0ab8fe826d1e',
+            chapterId: '65a635856bdd0ab8fe826e01',
+            sourceId,
+            question,
+            questionName,
+            content: generateContent(_content),
+            label,
+            options: _options,
+            points: Points.map(({ Key }) => pointsMap[Key]),
+            topics: Topics.map(({ Key }) => topicsMap[Key]),
+            vip,
+            price,
+            activityPrice: 0,
+            answers,
+            favCount,
+            viewCount,
+            downCount,
+            degree,
+            realCount,
+            paperCount,
+            date: new Date(date),
+          };
+        },
+      );
   };
 
   const nextPage = async (url, params = {}, pi = 1, ps = 10) => {
@@ -307,28 +313,44 @@ import { climbData, getData, saveDB } from './request.js';
         ...params,
       },
     });
-    console.log(`成功爬取${(pi - 1) * 10}-${pi * 10}条数据！`)
-    writeFile('./question.json', JSON.stringify(Data))
+    console.log(`成功爬取${(pi - 1) * 10}-${pi * 10}条数据！`);
+    writeFile('./question.json', JSON.stringify(Data));
     questions.push(...generateQuestions(Data, params.ct));
-    await saveDB('question/add', questions);
-    console.log(`成功存储${(pi - 1) * 10}-${pi * 10}条数据！`)
-
-    if (pi < TotalPage) {
-      await sleep()
-      await nextPage(url, params, pi + 1, ps)
-      console.log(TotalPage, 'TotalPage')
+    // 爬取答案
+    for (const _ of questions) {
+      const { sourceId } = _;
+      const { Ques } = await climbData(
+        'get',
+        'https://api.jyeoo.com//math3/AppTag/GetQues',
+        {
+          params: {
+            id: sourceId,
+            s: 0,
+          },
+        },
+      );
+      const { Analyse, Method, Discuss } = Ques;
+      _.analyse = Analyse;
+      _.method = generateContent(extractImg(Method));
+      _.discuss = Discuss;
     }
-  };
+    await saveDB('question/add', questions);
+    console.log(`成功存储${(pi - 1) * 10}-${pi * 10}条数据！`);
 
-  console.log('成功获取所有的选择题！')
+    // if (pi < TotalPage) {
+    //   await sleep();
+    //   await nextPage(url, params, pi + 1, ps);
+    //   console.log(TotalPage, 'TotalPage');
+    // }
+  };
 
   await nextPage('https://api.jyeoo.com//math3/AppTag/ListQues', {
     ct: 1,
     p1: 'afd13af0-1958-4812-8441-139d2934b40a', // bookId
-    p2: 'b812b8ad-0457-4362-a477-2d67edf937c2', // 章节id
+    p2: 'ce2eab14-18cf-4645-853e-2972b9e0aba2', // 章节id
   });
-  console.log('成功获取所有的填空题！')
-  console.log(QuestionsMap)
+  console.log('成功获取所有的填空题！');
+  console.log(QuestionsMap);
 
   // 获取答案
   // const analyse = await axios.get('https://api.jyeoo.com//math3/AppTag/GetQues?id=dddcc7e1-983f-488a-a298-b32315df1ff0&s=0', {

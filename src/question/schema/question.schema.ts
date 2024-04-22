@@ -14,6 +14,15 @@ export class Question extends Document {
   @Prop({ reqired: true, desc: '数据来源的数据id 防重复' })
   sourceId: string;
 
+  @Prop({ default: '', desc: '分析' })
+  analyse: string;
+
+  @Prop({ default: '', desc: '解答' })
+  method: { type: number; content: mongoose.Schema.Types.Mixed }[];
+
+  @Prop({ default: '', desc: '点评' })
+  discuss: string;
+
   @Prop({ required: true, desc: '题目类型' })
   question: number;
 

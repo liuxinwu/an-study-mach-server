@@ -12,8 +12,7 @@ export class ChapterController {
   }
 
   @Get('find')
-  find(@Query() query: Record<string, any>): Promise<ChapterDocument[]> {
-    const { _id } = query;
-    return this.chapterService.find(_id);
+  find(@Query() query: Record<string, any> = {}): Promise<ChapterDocument[]> {
+    return this.chapterService.find(query);
   }
 }
