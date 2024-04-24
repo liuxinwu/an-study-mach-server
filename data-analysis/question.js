@@ -1,5 +1,6 @@
 import { writeFile } from 'node:fs/promises';
 import { climbData, getData, saveDB } from './request.js';
+import { log } from 'node:console';
 
 (async () => {
   const sleep = () => {
@@ -202,7 +203,7 @@ import { climbData, getData, saveDB } from './request.js';
   };
 
   const QuestionsMap = {};
-  const generateQuestions = (source, questionType) => {
+  const generateQuestions = (source, questionType, otherParams) => {
     return source
       .filter(({ Content }) => {
         if (5 === questionType && Content.includes('<table')) return true;
@@ -260,9 +261,10 @@ import { climbData, getData, saveDB } from './request.js';
             }, [])
             .map((_) => generateContent(_));
           QuestionsMap[sourceId] = (QuestionsMap[sourceId] || 0) + 1;
+          const { bookId, chapterId } = otherParams;
           return {
-            bookId: '65a635856bdd0ab8fe826d1e',
-            chapterId: '65a635856bdd0ab8fe826e01',
+            bookId,
+            chapterId,
             sourceId,
             question,
             questionName,
@@ -287,35 +289,36 @@ import { climbData, getData, saveDB } from './request.js';
       );
   };
 
-  const nextPage = async (url, params = {}, pi = 1, ps = 10) => {
+  const nextPage = async (url, params = {}, otherParams = {}) => {
     const questions = [];
+    const _params = {
+      tp: 1,
+      p3: '',
+      dg: '0',
+      rg: '',
+      so: '',
+      yr: '',
+      ab: '',
+      sc: '',
+      gc: '',
+      rc: '',
+      yc: '',
+      ec: '',
+      er: '',
+      po: '0',
+      pd: '1',
+      hot: '0',
+      solutionNo: '',
+      pi: 1,
+      ps: 10,
+      ...params,
+    };
     const { TotalPage, Data } = await climbData('get', url, {
-      params: {
-        tp: 1,
-        p3: '',
-        dg: '0',
-        rg: '',
-        so: '',
-        yr: '',
-        ab: '',
-        sc: '',
-        gc: '',
-        rc: '',
-        yc: '',
-        ec: '',
-        er: '',
-        po: '0',
-        pd: '1',
-        hot: '0',
-        solutionNo: '',
-        pi,
-        ps,
-        ...params,
-      },
+      params: _params,
     });
-    console.log(`成功爬取${(pi - 1) * 10}-${pi * 10}条数据！`);
+    console.log(`成功爬取${(_params.pi - 1) * 10}-${_params.pi * 10}条数据！`);
     writeFile('./question.json', JSON.stringify(Data));
-    questions.push(...generateQuestions(Data, params.ct));
+    questions.push(...generateQuestions(Data, params.ct, otherParams));
     // 爬取答案
     for (const _ of questions) {
       const { sourceId } = _;
@@ -335,22 +338,52 @@ import { climbData, getData, saveDB } from './request.js';
       _.discuss = Discuss;
     }
     await saveDB('question/add', questions);
-    console.log(`成功存储${(pi - 1) * 10}-${pi * 10}条数据！`);
+    console.log(`成功存储${(_params.pi - 1) * 10}-${_params.pi * 10}条数据！`);
 
-    // if (pi < TotalPage) {
+    // if (_params.pi < TotalPage) {
     //   await sleep();
-    //   await nextPage(url, params, pi + 1, ps);
+    //   await nextPage(url, params, _params.pi + 1, _params.ps);
     //   console.log(TotalPage, 'TotalPage');
     // }
   };
 
-  await nextPage('https://api.jyeoo.com//math3/AppTag/ListQues', {
-    ct: 1,
-    p1: 'afd13af0-1958-4812-8441-139d2934b40a', // bookId
-    p2: 'ce2eab14-18cf-4645-853e-2972b9e0aba2', // 章节id
+  const books = await getData('book-version/find', {
+    params: {
+      isServices: true,
+    },
   });
-  console.log('成功获取所有的填空题！');
-  console.log(QuestionsMap);
+  for (const { bookClassifyInfo } of books) {
+    for (const { _id: bookId, sourceId: p1 } of bookClassifyInfo) {
+      const chapter = await getData('chapter/find', {
+        params: { bookId },
+      });
+      for (const { chapterIdInfo } of chapter) {
+        for (const { _id: chapterId, sourceId: p2 } of chapterIdInfo) {
+          await nextPage(
+            'https://api.jyeoo.com//math3/AppTag/ListQues',
+            {
+              ct: 1,
+              p1,
+              p2,
+            },
+            {
+              bookId,
+              chapterId,
+            },
+          );
+          return;
+        }
+      }
+    }
+  }
+
+  // await nextPage('https://api.jyeoo.com//math3/AppTag/ListQues', {
+  //   ct: 1,
+  //   p1: 'afd13af0-1958-4812-8441-139d2934b40a', // bookId
+  //   p2: 'ce2eab14-18cf-4645-853e-2972b9e0aba2', // 章节id
+  // });
+  // console.log('成功获取所有的填空题！');
+  // console.log(QuestionsMap);
 
   // 获取答案
   // const analyse = await axios.get('https://api.jyeoo.com//math3/AppTag/GetQues?id=dddcc7e1-983f-488a-a298-b32315df1ff0&s=0', {
